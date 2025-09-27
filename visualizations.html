@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 id="headerlogo">Hello! Welcome to my website!</h1>
+        <nav>
+        <a href="index.html?">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contact</a>
+        <a href="visualizations.html" class="selected">Visualizations</a>
+    </nav>
+    </header>
+    <section class="bodyText">
+        <h1>Heres some visualizations that I have created!</h1>
+        <section class="visualization"> 
+        <div class="visualization-box">
+            <h2>Bubble graph of Pokemon types (Up to Gen 9)</h2>
+            <svg viewbox="0 0 100 70"> <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/viewBox Reference for viewbox-->
+                <circle cx="20" cy="20" r="14" fill="#2980EF"></circle>
+                <text x="17" y="20" fill="black" font-size="1">Water type:14%</text>
+                <circle cx="45.8" cy="24" r="11.9" fill="#9FA19F"></circle>
+                <text x="42" y="24" fill="black" font-size="1">Normal type:11.9%</text>
+                <circle cx="64" cy="40" r="11.8" fill="#3FA129"></circle>
+                <text x="60" y="40" fill="black" font-size="1">Grass type:11.8%</text>
+                <circle cx="68" cy="17.5" r="10.9" fill="#EF4179"></circle>
+                <text x="63.5" y="17.5" fill="black" font-size="1">Psychic type:10.9%</text>
+                <circle cx="82.5" cy="31" r="8.2" fill="#E62829"></circle>
+                <text x="79.5" y="31" fill="black" font-size="1">Fire type:8.2%</text>
+                <circle cx="53.6" cy="7.5" r="6.2" fill="#FAC000"></circle>
+                <text x="49.6" y="7.5" fill="black" font-size="1">Electric type:6.2%</text>
+                <circle cx="32" cy="38.5" r="7.8" fill="#FF8000"></circle>
+                <text x="27.5" y="38.5" fill="black" font-size="1">Fighting type:7.8%</text>
+                <circle cx="16" cy="42" r="8.3" fill="#91A119"></circle>
+                <text x="13" y="42" fill="black" font-size="1">Bug type:8.3%</text>
+                <circle cx="36.5" cy="9.4" r="5.3" fill="#3DCEF3"></circle>
+                <text x="33.8" y="9.2" fill="black" font-size="1">Ice type:5.3%</text>
+                <circle cx="46" cy="42" r="6.1" fill="#EF70EF"></circle>
+                <text x="42.5" y="42" fill="black" font-size="1">Fairy type:6.1%</text>
+                <circle cx="81.3" cy="45.6" r="6.1" fill="#704170"></circle>
+                <text x="78" y="45.6" fill="black" font-size="1">Ghost type:6.6%</text>
+
+                <circle cx="81.5" cy="20.1" r="2.7" fill="#AFA981"></circle>
+                <text x="79.5" y="20.1" fill="black" font-size="0.8">Rock type</text>
+                <text x="80.7" y="21" fill="black" font-size="0.8">2.7%</text>
+
+                <circle cx="62.3" cy="4.8" r="2.8" fill="#9141CB"></circle>
+                <text x="60" y="4.8" fill="black" font-size="0.8">Poison type</text>
+                <text x="61.5" y="5.6" fill="black" font-size="0.8">2.8%</text>
+
+
+                <circle cx="44.65" cy="9.2" r="2.7" fill="#624D4E"></circle>
+                <text x="42.3" y="9.3" fill="black" font-size="0.7">Dark type:2.7%</text>
+
+                <circle cx="38.5" cy="47" r="2.3" fill="#5060E1"></circle>
+
+                <text x="36.7" y="47" fill="black" font-size="0.6">Dragon type</text>
+                <text x="37.9" y="47.6" fill="black" font-size="0.6">2.3%</text>
+
+                <circle cx="25.5" cy="45.2" r="1.4" fill="#60A1B8"></circle>
+                <text x="24.3" y="45.2" fill="black" font-size="0.5">Steel type</text>
+                <text x="25" y="45.8" fill="black" font-size="0.5">1.4%</text>
+            </svg>
+            <a href="https://www.reddit.com/r/pokemon/comments/1d9gdrb/i_made_a_chart_showing_how_many_pokémon_there_are">Data is found here<a>
+        </div>
+        </section>
+        <div class="divider"></div>
+        <section class="visualization"> 
+        <div class="visualization-box">
+            <h2>SVG generated checkerboard (Interaction changes color)</h2>
+            <svg viewbox="0 0 100 70" id="canvas">
+            </svg>
+            <div class="reference-box"> 
+                <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Namespaces_crash_course">SVG namespace reference found here</a>
+            <a href="https://www.w3schools.com/colors/colors_names.asp">Color reference found here</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">appendChild() reference found here</a>
+            </div>
+        </div>
+        </section>
+    </section>
+</body>
+<script src="vis.js"></script>
+</html>

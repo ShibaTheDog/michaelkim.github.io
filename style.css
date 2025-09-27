@@ -1,0 +1,150 @@
+* {
+    font-family: "Alan Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+header{ 
+    margin: auto;
+    padding: 1rem 2rem;
+}
+
+body {
+    margin: auto;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+header{
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+#headerlogo {
+    font-size: 24px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.selected {
+    color: darkblue;
+    font-weight: bold;
+
+}
+
+.link {
+    text-decoration: none;
+}
+
+svg {
+    border: 1px solid black;
+    
+}
+.bodyText{
+    padding: 0 5rem;
+    margin: 2rem auto;
+}
+
+.flex-center {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.textGroup {
+    min-width: 25rem;
+    width: 30%;
+    height: 100%;
+    margin: 2rem;
+}
+
+.divider{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 3rem;
+    background-color: lightgrey;
+    width: auto;
+    height: 1rem;
+}
+
+.image-gallery{
+    display: block;
+    text-align: center;
+}
+
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+.images img {
+    width: auto;
+    height: 20rem;
+    border-radius: 1rem;
+    border: 1px solid #d3d3d3
+}
+
+.visualization-box svg{
+    border-radius: 1rem;
+    border: 1px solid #d3d3d3;
+}
+
+.visualization-box h2 {
+    font-size: 2rem;
+}
+
+.visualization-box a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.visualization-box {
+    margin: 0 2rem;
+}
+
+
+.reference-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
