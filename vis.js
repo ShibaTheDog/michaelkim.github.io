@@ -3,7 +3,6 @@ console.log("script.js loaded");
 
 const page = 'visualizations.htmnl'
 const canvas = document.getElementById("canvas");
-let positions = null;
 
 console.log(canvas);
 
@@ -41,9 +40,7 @@ const colors = ['pink', 'orange', 'Gold', 'green', 'CornflowerBlue', 'violet', '
 square.forEach((squares) => {
     squares.addEventListener("click", () => {
         let randomColor = Math.floor((Math.random()*10));
-                console.log(randomColor);
         squares.setAttribute("fill", colors[randomColor]);
-        console.log(colors[randomColor]);
     }
     )})
 
