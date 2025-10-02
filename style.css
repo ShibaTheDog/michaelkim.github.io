@@ -85,7 +85,7 @@ svg {
 }
 
 .textGroup {
-    min-width: 25rem;
+    min-width: 15rem;
     width: 30%;
     height: 100%;
     margin: 2rem;
@@ -117,9 +117,12 @@ svg {
 
 .images img {
     width: auto;
-    height: 20rem;
+    max-height: 20rem;
     border-radius: 1rem;
-    border: 1px solid #d3d3d3
+    border: 1px solid #d3d3d3;
+    min-width: 15rem;
+    min-height: 10rem;
+
 }
 
 .visualization-box svg{
@@ -128,12 +131,12 @@ svg {
 }
 
 .visualization-box h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .visualization-box a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .visualization-box {
@@ -147,4 +150,41 @@ svg {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+@media (max-width: 38.75rem) {
+    h1 {
+        text-align: center;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:1rem;
+    }
+
+    #headerlogo {
+        font-size: 1.2rem;
+    }
+
+    header nav {
+        font-size: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .visualization-box h2 {
+        text-align: center;
+        min-width: 10rem;
+    }
+
+    .visualization-box svg {
+        margin: 1rem auto;
+    }
+
+    .bodyText {
+        padding: 0 3rem;
+    }
+
 }
