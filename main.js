@@ -10,16 +10,12 @@ async function fetchData() {
 async function drawVisualizations() {
   const data = await fetchData();
 
-  //calculate window size
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-  //https://www.w3schools.com/jsref/prop_win_innerheight.asp Reference to the window.InnerWidth variable.
+  //Set the width and height of the visualizations based on the windows size
+  const visWidth = window.innerWidth * 0.9;
+  const visHeight = window.innerHeight * 0.5;
+ //https://www.w3schools.com/jsref/prop_win_innerheight.asp Reference to the window.InnerWidth variable.
 
-  //calculate current viewport size using a math formula
-  const chartWidth = Math.min(viewportWidth * 0.9, viewportWidth);
-  const chartHeight = Math.min(viewportHeight * 0.45, viewportHeight);
-
-  //Clear the visualizations so it can be re-painted. 
+  //Clear the visualization windows so it can be re-painted and re-scaled. 
   document.querySelector("#canvas1").innerHTML = "";
   document.querySelector("#canvas2").innerHTML = "";
   document.querySelector("#canvas3").innerHTML = "";
@@ -39,23 +35,19 @@ async function drawVisualizations() {
     .encode(
       vl.y().fieldN("Genre"),
       vl.x().fieldN("Platform"),
-      vl.color()
-        .fieldN("Global_Sales")
-        .scale({ scheme: "orangered", reverse: true })
+      vl.color().fieldN("Global_Sales").scale({ scheme: "orangered"}).legend(false),
         //https://observablehq.com/d/4afb7848628c6b22 Helped me find colorscales for this dataset
-        .legend(false),
       vl.tooltip([ //Tooltip reference: https://www.youtube.com/watch?v=YAYwyly81uo
         vl.fieldN("Platform"),
         vl.fieldN("Genre"),
         vl.fieldQ("Global_Sales"),
       ])
     )
-    .title("Heatmap of Global Sales across platforms (Dark red signifies most sales)")
-    .width(chartWidth)
-    .height(chartHeight)
+    .title("Heatmap of Global Sales across platforms (Dark red signifies the most sales)")
+    .width(visWidth)
+    .height(visHeight)
     .config({ //https://vega.github.io/vega/docs/specification/#autosize I used config to help ensure legends and other parts of the chart didnt go outside their windows
       autosize: { type: "fit", contains: "padding" },
-      view: { stroke: "transparent" },
     })
     .toSpec();
 
@@ -70,10 +62,7 @@ async function drawVisualizations() {
     .encode(
       vl.x().fieldN("Year").title("Year"),
       vl.y().fieldQ("Global_Sales").aggregate("sum").title("Global Sales"),
-      vl.color()
-        .fieldN("Platform")
-        .legend(false)
-        .scale({ scheme: "tableau20" }),
+      vl.color().fieldN("Platform").legend(false).scale({ scheme: "tableau20" }),
       vl.facet(vl.row().fieldN("Genre").title("Genre")).columns(3),
       //https://observablehq.com/@observablehq/layers-facets-concat .facet Reference
       vl.tooltip([
@@ -82,11 +71,10 @@ async function drawVisualizations() {
         vl.fieldN("Publisher"),
       ])
     )
-    .width(chartWidth / 3 - 40)
-    .height(chartHeight)
+    .width(visWidth / 3 - 40)
+    .height(visHeight)
     .config({
       autosize: { type: "fit", contains: "padding" },
-      view: { stroke: "transparent" },
     })
     .title("Global sales of platforms over each year, spread across different charts")
     .toSpec();
@@ -103,7 +91,7 @@ async function drawVisualizations() {
   )
     .encode(
     vl.x().fieldN("Platform").title("Platform"),
-    vl.y().fieldQ("Sales").aggregate("sum").title("Total Global Sales (Counted in Millions)").stack(null),
+    vl.y().fieldQ("Sales").aggregate("sum").title("Total Global Sales (Counted in Millions)"),
     vl.color().fieldN("Region").title("Region"),
     vl.tooltip([
       vl.fieldN("Platform"),
@@ -111,11 +99,10 @@ async function drawVisualizations() {
     ])
   )
     .title("Which region liked which platform? The amount of sales each region had, organized by genre")
-    .width(chartWidth)
-    .height(chartHeight)
+    .width(visWidth)
+    .height(visHeight)
     .config({
       autosize: { type: "fit", contains: "padding" },
-      view: { stroke: "transparent" },
     })
     .toSpec();
 
@@ -143,11 +130,10 @@ async function drawVisualizations() {
     )
   )
      .title("Is Nintendo King? Nintendo Vs top 3 publishers in terms of global sales from 1980-2016")
-    .width(chartWidth)
-    .height(chartHeight)
+    .width(visWidth)
+    .height(visHeight)
     .config({
       autosize: { type: "fit", contains: "padding" },
-      view: { stroke: "transparent" },
     })
     .toSpec();
 
