@@ -152,6 +152,25 @@ svg {
     gap: 2rem;
 }
 
+#canvas1,
+#canvas2,
+#canvas3,
+#canvas4 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 95%; 
+    margin: auto;
+}
+
+.visualization.vega svg {
+    border: none;
+}
+
+
+
 @media (max-width: 38.75rem) {
     h1 {
         text-align: center;

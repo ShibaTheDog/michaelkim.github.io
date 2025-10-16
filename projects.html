@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 id="headerlogo">Hello! Welcome to my website!</h2>
+        <nav>
+        <a href="index.html?" class="selected">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contacts">Contact</a>
+        <a href="visualizations.html">Visualizations</a>
+    </nav>
+    </header>
+    <section class="bodyText">
+        <h1>Here is visualizations made for Assignment 3!</h1>
+        <section class="visualization vega">
+            <h2>Visualization 1: Global sales by Genre and Platform</h2>
+            <div id="canvas1">
+            </div>
+            <h4>This data visualization shows the sales of game titles by genre and platform through a heatmap, with tan-ish colors representing a low sale and red colors representing a high sales value. </h4>
+        </section>
+        <div class="divider"></div>
+        <section class="visualization vega">
+            <h2>Visualization 2: Sales Over Time by Platform and Genre</h2>
+            <div id="canvas2">
+            </div>
+            <h4> This data visualization shows the sales of titles in terms of platforms and genres from 1980-2020. Platforms are represented through colors on the bar chart while genres are represented through the stacked bar charts. </h4>
+        </section>
+        <div class="divider"></div>
+        <section class="visualization vega">
+            <h2>Visualization 3: Regional Sales vs. Platform</h2>
+            <div id="canvas3">
+            </div>
+            <h4>This data visualization shows a stacked bar chart that compares the different regional sales across each genre. Bars are stacked ontop of each other to help give quick and fast comparisons. </h4>
+        </section>
+        <div class="divider"></div>
+        <section class="visualization vega">
+            <h2>Visualization 4: How well did the top 3 publishers do against Nintendo in terms of global sales?</h2>
+            <div id="canvas4">
+            </div>
+            <h4>This data visualization compares the top 3 publishers (which are Activision, Namco Bandai Games, and Electronic arts) against Nintendo, one of the bestselling game title creators. Using the nature of quick comparisons of a stacked bar chart, users can quickly make comparisons about which companies performed the best for each year and if Nintendo had more sales compared to the top 3 publishers.</h4>
+        </section>
+    </section>
+    <script type ="module" src="main.js"></script>
+</body>
+</html>
